@@ -41,21 +41,28 @@ rm traffic-signs-data.zip
 
 [//]: # "Image References"
 
-[image1]: ./examples/visualization.jpg "Visualization"
-[image2]: ./examples/grayscale.jpg "Grayscaling"
-[image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
+[image1]: ./examples/visualize_dataset.png "visual data information"
+[image2]: ./examples/visualize_images.png "Visual image"
+[image3]: ./examples/grayscale.jpg "Grayscaling"
+[image4]: ./examples/random_noise.jpg "Random Noise"
+[image5]: ./examples/placeholder.png "Traffic Sign 1"
+[image6]: ./examples/placeholder.png "Traffic Sign 2"
+[image7]: ./examples/placeholder.png "Traffic Sign 3"
+[image8]: ./examples/placeholder.png "Traffic Sign 4"
+[image9]: ./examples/placeholder.png "Traffic Sign 5"
 
 ## Rubric Points
 ### Data Set Summary & Exploration
 
+
+
 - [x] Ipython notebook
+
 - [x] HTML File
+
 - [x] Writeup report (markdown)
+
+      ​
 
 #### 1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
 
@@ -75,9 +82,13 @@ signs data set:
 
 #### 2. Include an exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+1. 使用值方圖將dataset的每個類別數量顯示出來。
 
-![alt text][image1]
+   ![alt text][image1]
+
+2. 圖像可是視化函式，一次輸出8筆圖像在畫面終，並且在圖像上方標上類別。
+
+   ![alt text][image2]
 
 ### Design and Test a Model Architecture
 
@@ -87,7 +98,7 @@ As a first step, I decided to convert the images to grayscale because ...
 
 Here is an example of a traffic sign image before and after grayscaling.
 
-![alt text][image2]
+![alt text][image3]
 
 As a last step, I normalized the image data because ...
 
@@ -97,7 +108,7 @@ To add more data to the the data set, I used the following techniques because ..
 
 Here is an example of an original image and an augmented image:
 
-![alt text][image3]
+![alt text][image4]
 
 The difference between the original data set and the augmented data set is the following ... 
 
@@ -126,6 +137,8 @@ To train the model, I used an ....
 
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
+
+
 My final model results were:
 * training set accuracy of ?
 * validation set accuracy of ? 
@@ -150,8 +163,8 @@ If a well known architecture was chosen:
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+![alt text][image5] ![alt text][image6] ![alt text][image7] 
+![alt text][image8] ![alt text][image9]
 
 The first image might be difficult to classify because ...
 
