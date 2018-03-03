@@ -218,37 +218,36 @@ Here are the results of the prediction:
 
 | Image			        |     Prediction	        					|
 |:---------------------:|:---------------------------------------------:|
-| Speed limit (30km/h) | Speed limit (30km/h) |
-| Perestrains | Speed limit (70km/h) |
 | Speed limit (70km/h)	| Speed limit (70km/h)	|
-| Priority road	| Priority road	|
-| No entry	| No entry     |
 | General caution	| General caution |
+| Priority road	| Priority road	|
+| Perestrains | Speed limit (70km/h) |
 | Road work	| Road work |
 | Turn right ahead	| Ahead only |
+| Speed limit (30km/h) | Speed limit (30km/h) |
+| No entry	| No entry     |
 
 網絡從8張影像中正確分辨出6張影像，正確率為75%。這準確率與test dataset的準確率有落差，可能是因為resize後的images有變形或web上下載的影像有浮水印所造成的關西。
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
+|Probability       |     Prediction	        				|
+|:--------------:|:---------------------------:|
+| 99.99%         		| Speed limit (70km/h)						|
+| 100%     				| General caution			    			|
+| 100%					| Priority road					    		|
+| 99.99% | Speed limit (70km/h)		     				|
+| 100%				| Road work	     							    |
+| 99.99%	| Ahead only					     			|
+| 99.96%	   | Speed limit (30km/h)					 	    |
+| 100%				| No entry      					     		|
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+結果比較意外的地方是Turn right ahead和Perestrains都預測錯誤，但是probability都還是十分高。推測錯誤原因可能為：
 
-| Probability         	|     Prediction	        					|
-|:---------------------:|:---------------------------------------------:|
-| 99.99%         			| Speed limit (30km/h) 						|
-| 100%     				| Speed limit (70km/h) 							|
-| 100%					| Speed limit (70km/h)							|
-| 	      			| Priority road					 				|
-| .01				    | No entry      							    |
-| .05					| General caution								|
-| .04	      			| Road work					 			     	|
-| .01				    | Ahead only      					     		|
+	* Turn right ahead、Perestrains的訓練資料都比較少
+	* rezise後圖片造成變形
+	* 背景顏色所導致
 
-For the second image ... 
-
-### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
-#### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
+#### 
 
 
